@@ -3,12 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Citizen
+  - Stop Sign
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Civilian
   - Water
   - UI
   - 

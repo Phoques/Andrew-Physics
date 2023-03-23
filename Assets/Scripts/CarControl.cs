@@ -7,8 +7,8 @@ public class CarControl : MonoBehaviour
 
     HingeJoint[] joints;
     public float wheelTurn;
-
-    public GameObject frontWheelLeft;
+    public bool blowHorn;
+    //public GameObject frontWheelLeft;
 
 
     private void Start()
@@ -17,6 +17,21 @@ public class CarControl : MonoBehaviour
         
         
     }
+
+    private void Update()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            blowHorn = true;
+            Debug.Log("Blow Horn");
+        }
+        else if(Input.GetMouseButtonUp(0))
+        {
+            blowHorn = false;
+            Debug.Log("NO Horn");
+        }
+    }
+
 
     private void FixedUpdate()
     {
@@ -39,7 +54,7 @@ public class CarControl : MonoBehaviour
             foreach (HingeJoint joint in joints)
             {
                 JointMotor motor = joint.motor;
-                motor.targetVelocity += 200 * Time.deltaTime;
+                motor.targetVelocity += 500 * Time.deltaTime;
                 joint.motor = motor;
 
 
@@ -66,14 +81,11 @@ public class CarControl : MonoBehaviour
 
         
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            frontWheelLeft.transform.Rotate(50, 0, 0, Space.Self);
-        }
+        
 
     }
 
-    /*public void AddTorque(float x, float y, float z, ForceMode mode = ForceMode.Force);*/
+    
 
 
 }

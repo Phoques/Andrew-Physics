@@ -143,11 +143,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Free Racing Car Blue Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7495443279060062592, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: m_Mass
+      value: 2000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
 --- !u!146 &314971172518125230 stripped
 WheelCollider:
   m_CorrespondingSourceObject: {fileID: 4795950753765878369, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+  m_PrefabInstance: {fileID: 5103039417754662095}
+  m_PrefabAsset: {fileID: 0}
+--- !u!146 &5223429399262309916 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 1057494946909100755, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
   m_PrefabInstance: {fileID: 5103039417754662095}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &6948587442945639655 stripped
@@ -182,5 +191,14 @@ MonoBehaviour:
     rightWheel: {fileID: 314971172518125230}
     motor: 1
     steering: 1
-  maxMotorTorque: 400
+  - leftWheel: {fileID: 7887936941379631419}
+    rightWheel: {fileID: 5223429399262309916}
+    motor: 1
+    steering: 0
+  maxMotorTorque: 300
   maxSteeringAngle: 40
+--- !u!146 &7887936941379631419 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 3145262460232535540, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+  m_PrefabInstance: {fileID: 5103039417754662095}
+  m_PrefabAsset: {fileID: 0}

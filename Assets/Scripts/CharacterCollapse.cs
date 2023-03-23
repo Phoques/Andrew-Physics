@@ -8,8 +8,11 @@ public class CharacterCollapse : MonoBehaviour
     //Joint[] joints;
     Rigidbody[] rbs;
 
+
     private void Start()
     {
+
+
         //joints = GetComponentsInChildren<HingeJoint>();
         rbs = GetComponentsInChildren<Rigidbody>();
 
@@ -34,6 +37,7 @@ public class CharacterCollapse : MonoBehaviour
         {
             GoStiff();
         }
+
 
     }
 
