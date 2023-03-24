@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Checkpoint3 : MonoBehaviour
+public class CheckpointGood : MonoBehaviour
 {
     BoxCollider bc;
     Advisors advisorsClass;
@@ -15,17 +15,17 @@ public class Checkpoint3 : MonoBehaviour
 
     }
 
+    
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            
+
             advisorsClass.StopAllCoroutines();
-            advisorsClass.StartCoroutine(advisorsClass.Check3());
+            advisorsClass.StartCoroutine(advisorsClass.CheckGood());
             bc.enabled = false;
         }
-        
-    }
 
-    
+    }
 }

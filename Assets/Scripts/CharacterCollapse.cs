@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class CharacterCollapse : MonoBehaviour
 {
     //Joint[] joints;
     Rigidbody[] rbs;
+    Karma karmaClass;
 
 
     private void Start()
@@ -15,6 +15,7 @@ public class CharacterCollapse : MonoBehaviour
 
         //joints = GetComponentsInChildren<HingeJoint>();
         rbs = GetComponentsInChildren<Rigidbody>();
+        karmaClass = FindObjectOfType<Karma>();
 
         //This is setting all of the rigidbodies in the Ragdoll we created on the object to Kinematic (Meaning they wont collapse or move like normal rigid body)
         foreach (Rigidbody rb in rbs)
@@ -47,6 +48,7 @@ public class CharacterCollapse : MonoBehaviour
         {
             rb.isKinematic = false;
         }
+            karmaClass.LoseKarma();
     }
 
     public void GoStiff()

@@ -27,7 +27,7 @@ public class WreckingBall : MonoBehaviour
     }
 
 
-    private void WreckingBallGo()
+    public void WreckingBallGo()
     {
         foreach (Rigidbody rb in rbs)
         {

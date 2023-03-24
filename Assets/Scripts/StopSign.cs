@@ -5,28 +5,23 @@ using UnityEngine;
 public class StopSign : MonoBehaviour
 {
     HingeJoint[] joints;
-    CarControl carControlClass;
+    public GameObject stopBlock;
 
     private void Start()
     {
 
         joints = GetComponentsInChildren<HingeJoint>();
-        carControlClass = FindObjectOfType<CarControl>();
     }
 
-    private void Update()
-    {
-        
-        
-    }
 
     public void MoveRail()
     {
+        Debug.Log("Rail is MOVING");
         foreach (HingeJoint joint in joints)
         {
 
         JointMotor motor = joint.motor;
-        motor.targetVelocity -= 25 * Time.deltaTime;
+        motor.targetVelocity -= 35 * Time.deltaTime;
         motor.force += 15;
         joint.motor = motor;
         }
