@@ -7,6 +7,7 @@ public class Raycast : MonoBehaviour
     StopSign stopSignClass;
     Advisors advisorsClass;
     WreckingBall wreckingBallClass;
+    KillCam killcamClass;
     RaycastHit hit;
     
 
@@ -17,6 +18,7 @@ public class Raycast : MonoBehaviour
         stopSignClass = FindObjectOfType<StopSign>();
         advisorsClass= FindObjectOfType<Advisors>();
         wreckingBallClass = FindObjectOfType<WreckingBall>();
+        killcamClass= FindObjectOfType<KillCam>();
     }
 
 
@@ -40,6 +42,7 @@ public class Raycast : MonoBehaviour
                 Destroy(stopSignClass.stopBlock);
                 advisorsClass.StopAllCoroutines();
                 advisorsClass.StartCoroutine(advisorsClass.WorkerDeath());
+                killcamClass.StartCoroutine(killcamClass.KillCamera());
                 wreckingBallClass.WreckingBallGo();
 
 

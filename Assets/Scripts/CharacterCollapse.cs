@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterCollapse : MonoBehaviour
 {
-    //Joint[] joints;
+    
     Rigidbody[] rbs;
     Karma karmaClass;
 

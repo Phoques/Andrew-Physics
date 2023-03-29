@@ -8,7 +8,6 @@ public class CarControl : MonoBehaviour
     HingeJoint[] joints;
     public float wheelTurn;
     public bool blowHorn;
-    //public GameObject frontWheelLeft;
 
    
 
